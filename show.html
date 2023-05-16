@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Book List</h2>
+<table>
+    <tr>
+        <th>Book Name</th>
+        <th>Publisher Name</th>
+        <th>Age of Publisher</th>
+        <th>Number of Pages</th>
+        <th>Date of Publish</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book.book_name }}</td>
+        <td>{{ book.publisher_name }}</td>
+        <td>{{ book.age_range }}</td>
+        <td>{{ book.num_pages }}</td>
+        <td>{{ book.date_of_publish }}</td>
+
+        {% endfor %} 
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Insert Book</h1>
+<form method="POST" action="">
+    <label for="book_name">Book Name:</label>
+    <input  type="text" name="book_name" required><br><br>
+    
+    <label for="publisher_name">Publisher Name:</label>
+    <input type="text" name="publisher_name" required><br><br>
+    
+    <label for="age_range">Age of Publisher:</label>
+    <select name="age_range" required>
+        {% for age in age_ranges %}
+        <option value="{{ age }}">{{ age }}</option>
+        {% endfor %}
+    </select><br><br>
+    
+    <label for="num_pages">Number of Pages:</label>
+    <input type="number" name="num_pages" required><br><br>
+    
+    <label for="date_of_publish">Date of Publish:</label>
+    <input type="date" name="date_of_publish" required><br><br>
+    
+    <input class="form-control btn btn-dark" type="submit" value="Add Book">
+</form>
+
+{% endblock %}
+
+
+    

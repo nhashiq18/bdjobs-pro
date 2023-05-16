@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+   <div class="container my-5">
+    <h2>Select any option below!</h2>
+    <legend><a href="{{url_for('add')}}" type="button" class="btn btn-primary">ADD ITEAMS</a></legend>
+    <legend><a href="{{url_for('show')}}" type="button" class="btn btn-success">VIEW ITEAMS</a></legend>
+   </div>
+{% endblock content %}
